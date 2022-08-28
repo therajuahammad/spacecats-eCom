@@ -1,0 +1,12 @@
+.category-banner {
+  &:after {
+    content: "";
+    position: absolute;
+    height: calc(100% - 70px);
+    width: calc(100% - 60px);
+    left: 0;
+    top: 0;
+    border: 8px solid #fff;
+    margin: 35px 30px;
+  }
+}

@@ -1,0 +1,23 @@
+.product {
+  &_thumb {
+
+    &:before, .btn-add-to-cart {
+      transition: 0.4s;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    .btn-add-to-cart {
+      margin-top: 0 !important;
+    }
+
+    .product {
+      &_thumb {
+        &:before, .btn-add-to-cart {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
