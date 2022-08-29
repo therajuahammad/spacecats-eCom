@@ -1,0 +1,95 @@
+.footer-area{
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: capitalize;
+  .footer{
+    @at-root{
+      &-top{
+        padding: 92px 0  157px 0;
+
+        @include respond-below(md){
+          padding: 80px 0  110px 0;
+
+        }
+        @include respond-below(sm){
+          padding: 70px 0  90px 0;
+
+        }
+        @include respond-below(xs){
+          padding: 60px 0  70px 0;
+
+        }
+      }
+    }
+    &__logo{
+      h2{
+        @include texts(24, 29);
+        margin-bottom: 10px;
+      }
+    }
+    &__disc{
+      p{
+        @include texts(14, 22);
+        font-weight: 400;
+
+        @include respond-between(md, lg){
+          font-size: 12px;
+
+        }
+
+
+      }
+    }
+    &__title{
+      h3{
+        @include texts(18, 22);
+        margin-bottom: 16px;
+
+        @include respond-below(xs){
+          font-size: 16px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &__widget{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li.item{
+        a.link{
+          display: inline-block;
+          text-decoration: none;
+          @include texts(12, 15);
+          font-weight: 500;
+          margin-top: 14px;
+          color: #ffffff;
+          transition: all .3s ease-in-out;
+
+          @include respond-below(xs){
+            margin-top: 10px;
+          }
+          &:hover{
+            color: #F09522;
+          }
+        }
+      }
+
+    }
+    &__copy-right{
+      .copy-disc{
+        p{
+          @include texts(14, 17);
+          font-weight: 500;
+          padding: 30px 0;
+          border-top: 2px solid #ffffff;
+
+          @include respond-below(xs){
+            padding: 20px 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

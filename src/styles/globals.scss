@@ -28,7 +28,8 @@ body {
     background-color: rgba(82, 82, 82, 0.45);
   }
 }
-
+@import "mixins";
 @import "header";
 @import "categories-banner";
 @import "product";
+@import "footer";

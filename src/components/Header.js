@@ -1,6 +1,23 @@
 import {Button, Col, Container, Row} from "reactstrap";
+import {useDispatch} from "react-redux";
+import Cookies from "js-cookie";
+import {loginAction} from "../global/actions/authActions";
+import {useRouter} from "next/router";
 
 const Header = () => {
+    const dispatch = useDispatch();
+    const router = useRouter();
+
+    const logout = () => {
+        dispatch(loginAction({
+            username: "",
+            token: "",
+            isAuthorize: false
+        }));
+        Cookies.remove('token');
+        router.reload();
+    }
+
     return (
         <header>
             <div className="header-top bg-black text-white py-3">
@@ -36,9 +53,13 @@ const Header = () => {
                                 </nav>
 
                                 <div className="header-actions d-flex gap-4">
-                                    <Button className="p-0 bg-transparent border-0"><img src="/images/icons/search.png"/></Button>
-                                    <Button className="p-0 bg-transparent border-0"><img src="/images/icons/user.png"/></Button>
-                                    <Button className="p-0 bg-transparent border-0"><img src="/images/icons/bag.png"/></Button>
+                                    <Button className="p-0 bg-transparent border-0"><img
+                                        src="/images/icons/search.png"/></Button>
+                                    <Button onClick={() => logout()} className="p-0 bg-transparent border-0">
+                                        <img src="/images/icons/user.png"/>
+                                    </Button>
+                                    <Button className="p-0 bg-transparent border-0"><img
+                                        src="/images/icons/bag.png"/></Button>
                                 </div>
                             </div>
                         </Col>

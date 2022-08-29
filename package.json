@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "bootstrap": "^5.2.0",
-    "cogo-toast": "^4.2.3"
+    "cogo-toast": "^4.2.3",
+    "js-cookie": "^3.0.1"
   }
 }
