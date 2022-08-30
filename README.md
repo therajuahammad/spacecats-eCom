@@ -1,5 +1,7 @@
 # Project made with React.js and Next.js
 
+#### Live URL: https://spacecats-raju.netlify.app/
+
 ### For install packages go to project root folder and run command `yarn install`
 
 ## Script
