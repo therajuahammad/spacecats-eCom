@@ -1,13 +1,19 @@
-import HomeLayout from "../layouts/homeLayout";
-import CategoriesBanner from "../components/CategoriesBanner";
-import PopularProducts from "../components/PopularProducts";
 import axios from "axios";
+import HomeLayout from "../layouts/homeLayout";
+import HeroBanner from "../components/HeroBanner";
+import PopularProducts from "../components/PopularProducts";
+import CategoriesBanner from "../components/CategoriesBanner";
+import Services from "../components/Services";
+import Newsletter from "../components/Newsletter";
 
 const IndexPage = ({products}) => {
     return (
         <HomeLayout>
+            <HeroBanner/>
+            <Services/>
             <CategoriesBanner/>
             <PopularProducts products={products} />
+            <Newsletter/>
         </HomeLayout>
     )
 }

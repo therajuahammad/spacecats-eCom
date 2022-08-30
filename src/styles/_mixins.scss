@@ -11,11 +11,8 @@ $breakpoints: (
 );
 
 
-//
-//  RESPOND ABOVE
-//––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// @include respond-above(sm) {}
+//  RESPOND ABOVE
 @mixin respond-above($breakpoint) {
 
   // If the breakpoint exists in the map.
@@ -38,11 +35,8 @@ $breakpoints: (
 }
 
 
-//
-//  RESPOND BELOW
-//––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// @include respond-below(sm) {}
+//  RESPOND BELOW
 @mixin respond-below($breakpoint) {
 
   // If the breakpoint exists in the map.
@@ -65,11 +59,8 @@ $breakpoints: (
 }
 
 
-//
-//  RESPOND BETWEEN
-//––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// @include respond-between(sm, md) {}
+//  RESPOND BETWEEN
 @mixin respond-between($lower, $upper) {
 
   // If both the lower and upper breakpoints exist in the map.
@@ -106,4 +97,11 @@ $breakpoints: (
 @mixin texts($font-size, $line-height) {
   font-size: $font-size + px;
   line-height: $line-height + px;
+}
+
+@mixin fonts ($font-size, $font-weight, $text-color, $line-height) {
+  font-size: $font-size + px;
+  font-weight: $font-weight;
+  color: $text-color;
+  line-height: $line-height;
 }

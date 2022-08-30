@@ -1,0 +1,116 @@
+.hero {
+  &-container {
+    &__content {
+      margin-bottom: 20px;
+      @include respond-below(md) {
+        margin-top: 80px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      h1 {
+        @include fonts(46, 700, #000, 56px);
+
+        @include respond-between(md, lg) {
+          @include texts(40, 50);
+        }
+
+        @include respond-between(sm, md) {
+          @include texts(35, 50);
+        }
+
+        @include respond-between(xs, sm) {
+          @include texts(30, 45);
+        }
+
+        @include respond-below(xs) {
+          @include texts(25, 35);
+        }
+      }
+
+    }
+
+    &__disc {
+      p {
+        @include texts(14, 22);
+        margin: 16px 0 39px;
+        color: #000000;
+        @include respond-between(md, lg) {
+          @include texts(16, 28);
+        }
+        @include respond-below(xs) {
+          @include texts(14, 26);
+          margin: 10px 0 30px;
+        }
+      }
+    }
+  }
+
+  &__count {
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 60px;
+    padding: 20px 20px 20px 40px;
+    @include respond-below(sm) {
+      padding: 19px 21px 15px 28px;
+      margin-top: 50px;
+    }
+
+    @include respond-below(xs) {
+      margin-top: 45px;
+    }
+    @include respond-below(xs) {
+      padding: 20px;
+    }
+
+    &__title {
+      h3 {
+        @include texts(18, 22);
+        margin-bottom: 12px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+
+        p.seperator {
+          display: inline-block;
+        }
+
+        span, p.seperator {
+          @include texts(43, 52);
+          font-weight: 700;
+
+          @include respond-below(lg) {
+            @include texts(33, 42);
+
+          }
+          @include respond-below(sm) {
+            @include texts(25, 35);
+
+            @include respond-below(xs) {
+              @include texts(22, 30);
+            }
+          }
+        }
+
+        p {
+          @include texts(12, 14);
+          font-weight: 500;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 0;
+
+          @include respond-below(xs) {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+}

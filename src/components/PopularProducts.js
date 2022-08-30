@@ -13,9 +13,9 @@ const PopularProducts = ({products}) => {
                     </p>
                 </div>
 
-                <Row>
+                <Row style={{rowGap: 30}}>
                     {products.map(product => (
-                        <Col md={6} lg={3} key={product.id}>
+                        <Col sm={6} lg={3} key={product.id}>
                             <Product product={product}/>
                         </Col>
                     ))}

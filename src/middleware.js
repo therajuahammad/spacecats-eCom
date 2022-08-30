@@ -18,5 +18,5 @@ export function middleware(req) {
 }
 
 export const config = {
-    matcher: ['/signin', '/'],
+    matcher: ['/signin', '/', '/product/:id*'],
 };

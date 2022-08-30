@@ -7,7 +7,7 @@ body {
 
 .container {
   @media screen and (min-width: 1000px) {
-    max-width: 988px;
+    max-width: 1080px;
   }
 }
 
@@ -30,6 +30,7 @@ body {
 }
 @import "mixins";
 @import "header";
+@import "hero";
 @import "categories-banner";
 @import "product";
 @import "footer";
