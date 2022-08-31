@@ -27,12 +27,12 @@ const SigninPage = () => {
         axios.post(`https://fakestoreapi.com/auth/login`, {
             username: values.username,
             password: values.password,
-        }).then(res => {
+        }).then(async (res) => {
             if (res) {
                 const token = res.data.token;
                 Cookies.set("token", token);
                 const username = jwtDecode(token);
-                dispatch(login({
+                await dispatch(login({
                     token,
                     username: username.user,
                     isAuthorize: true
